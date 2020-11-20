@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/app.sj"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Instructors</title>
+  </head>
+  <body>
+    <form id="add-instructor">
+      <div class="form-wrapper">
+        <h2>Add an instructor:</h2>
+        <div class="form-input">
+          <label for="first_name">First Name:</label>
+          <input type="text" id="first_name" required />
+        </div>
+        <div class="form-input">
+          <label for="last_name">Last Name:</label>
+          <input type="text" id="last_name" required />
+        </div>
+        <div class="form-input">
+          <label for="interesting_fact">Interesting Fact:</label>
+          <input type="text" id="ineresting_fact" required />
+        </div>
+        <div class="form-input">
+          <label for="likelyhood_select"
+            >Will they make it to the end of the course?</label
+          >
+          <select id="likelyhood_select">
+            <option disabled selected>What do you think?</option>
+            <option value="never">They'll never leave...</option>
+            <option value="maybe">They might leave...</option>
+            <option value="already">It's like they already have...</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <div id="instructor-list">
+      <h2>List of Instructors:</h2>
+      <ul class="list"></ul>
+    </div>
+  </body>
+</html>
