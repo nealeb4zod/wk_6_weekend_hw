@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="js/app.sj"></script>
+    <script src="js/app.js"></script>
+    <script src="js/instructor.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>Instructors</title>
   </head>
@@ -21,25 +22,25 @@
         </div>
         <div class="form-input">
           <label for="interesting_fact">Interesting Fact:</label>
-          <input type="text" id="ineresting_fact" required />
+          <input type="text" id="interesting_fact" required />
         </div>
         <div class="form-input">
-          <label for="likelyhood_select"
+          <label for="likelihood"
             >Will they make it to the end of the course?</label
           >
-          <select id="likelyhood_select">
+          <select id="likelihood">
             <option disabled selected>What do you think?</option>
             <option value="never">They'll never leave...</option>
             <option value="maybe">They might leave...</option>
             <option value="already">It's like they already have...</option>
           </select>
         </div>
-        <button type="submit">Submit</button>
+        <button id="submit" type="submit">Submit</button>
       </div>
     </form>
     <div id="instructor-list">
       <h2>List of Instructors:</h2>
-      <ul class="list"></ul>
+      <ul id="list"></ul>
     </div>
   </body>
 </html>
