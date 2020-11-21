@@ -1,3 +1,5 @@
+![](https://github.com/nealeb4zod/wk_6_weekend_hw/blob/main/screenshot.png)
+
 # Homework: Manipulating the DOM
 
 ### Learning Objectives
