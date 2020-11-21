@@ -11,27 +11,45 @@ const Instructor = function (
 };
 
 Instructor.prototype.makeInstructorListElement = function (
-  elements,
+  instructorCount,
+  elementLabelsArray,
+  elementsArray,
   liClass = null,
   elementsClass = null
 ) {
-  const instructorListItem = this.makeListElement(liClass);
+  const instructorId = instructorCount + 1;
+  const instructorListItem = this.makeListElement(liClass, instructorId);
 
   Object.entries(this).forEach((name, index) => {
-    name[0] = document.createElement(elements[index]);
-    name[0].textContent = name[1];
+    let elementName = name[0];
+    const elementText = name[1];
+    elementName = document.createElement(elementsArray[index]);
+    elementName.textContent = elementLabelsArray[index] + " " + elementText;
     if (elementsClass != null) {
-      name[0].classList.add(elementsClass);
+      elementName.classList.add(elementsClass);
     }
-    instructorListItem.appendChild(name[0]);
+    instructorListItem.appendChild(elementName);
   });
+  const instructorDeleteButton = this.makeInstructorDeleteButton(instructorId);
+  instructorListItem.append(instructorDeleteButton);
   return instructorListItem;
 };
-Instructor.prototype.makeListElement = function (liClass) {
+
+Instructor.prototype.makeListElement = function (liClass, instructorId) {
   const instructorListItem = document.createElement("li");
   if (liClass != null) {
     instructorListItem.classList.add(liClass);
   }
+  instructorListItem.setAttribute("id", `instructor-${instructorId}`);
   return instructorListItem;
 };
-// Instructor.prototype.deleteInstructor = function () {};
+Instructor.prototype.makeInstructorDeleteButton = function (instructorId) {
+  const instructorDeleteButton = document.createElement("button");
+  instructorDeleteButton.textContent = "Remove";
+  const deleteButtonId = `delete-instructor-${instructorId}`;
+  instructorDeleteButton.setAttribute("id", deleteButtonId);
+  instructorDeleteButton.setAttribute("value", `instructor-${instructorId}`);
+  instructorDeleteButton.classList.add("button");
+
+  return instructorDeleteButton;
+};
