@@ -36,6 +36,7 @@ const handleSubmitForm = function (event) {
 };
 
 const handleDeleteInstructor = function (event) {
+  if (event.target.tagName != "BUTTON") return;
   const instructorToRemove = document.querySelector(`#${event.target.value}`);
   instructorToRemove.remove();
 };
