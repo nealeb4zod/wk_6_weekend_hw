@@ -19,7 +19,7 @@ body {
   font-family: "Roboto Mono", monospace;
 }
 
-h1,
+header,
 #add-instructor,
 #instructor-list {
   background-color: #a4b494ff;
@@ -83,4 +83,10 @@ input[type="submit"] {
 .button:hover,
 input[type="submit"]:hover {
   background-color: rgb(150, 156, 136);
+}
+
+header {
+  display: flex;
+
+  justify-content: space-between;
 }

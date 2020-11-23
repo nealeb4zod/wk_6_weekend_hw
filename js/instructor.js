@@ -17,7 +17,7 @@ Instructor.prototype.makeInstructorListElement = function (
   liClass = null,
   elementsClass = null
 ) {
-  //  Create an instrutorID based on the current child elements of #list
+  //  Create an instructorID based on the current child elements of #list
   const instructorId = instructorCount + 1;
 
   // Create the <li> that the other will append to.
@@ -69,3 +69,4 @@ Instructor.prototype.makeInstructorDeleteButton = function (instructorId) {
 
   return instructorDeleteButton;
 };
+module.exports = Instructor;

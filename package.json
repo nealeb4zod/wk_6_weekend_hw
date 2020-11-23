@@ -1,0 +1,23 @@
+{
+  "name": "weekend_hw",
+  "version": "1.0.0",
+  "description": "![](https://github.com/nealeb4zod/wk_6_weekend_hw/blob/main/screenshot.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nealeb4zod/wk_6_weekend_hw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nealeb4zod/wk_6_weekend_hw/issues"
+  },
+  "homepage": "https://github.com/nealeb4zod/wk_6_weekend_hw#readme",
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}
