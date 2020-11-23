@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/nealeb4zod/wk_6_weekend_hw.svg?branch=main)](https://travis-ci.com/nealeb4zod/wk_6_weekend_hw)
+
 ![](https://github.com/nealeb4zod/wk_6_weekend_hw/blob/main/screenshot.png)
 
 # Homework: Manipulating the DOM
